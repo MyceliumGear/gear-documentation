@@ -32,7 +32,7 @@ In response to the request above, you will receive the following json from Mycel
   "status": 0,
   "amount": 1,
   "address": "12REjGNsZfdWj5kWTuMZ2p6WPeyWFWwUT8",
-  "tid": null,
+  "transaction_ids": [],
   "id": 1298,
   "payment_id": "5fb72e26b23cef0900779487698893b6f566e9b8386dfb57bfabe30448b7b163",
   "amount_in_btc": "0.00000001",

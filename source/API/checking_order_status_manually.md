@@ -12,7 +12,7 @@ where **:api_gateway_id** is the API id of your gateway, which you can look up o
   "status": 2,
   "amount": 7894000,
   "address": "1NZov2nm6gRCGW6r4q1qHtxXurrWNpPr1q",
-  "tid": "f0f9205e41bf1b79cb7634912e86bb840cedf8b1d108bd2faae1651ca79a5838",
+  "transaction_ids": ["f0f9205e41bf1b79cb7634912e86bb840cedf8b1d108bd2faae1651ca79a5838"],
   "id": 1,
   "payment_id": "y78033435ea02f024f9abdfd04adabe314a322a0d353c33beb3acb7d97f1bdeb",
   "amount_in_btc": "0.07894",
