@@ -1,4 +1,3 @@
-# Overview of payment processing
 This section describes some basic things about payment processing, as well as introduces terms that will be used in the following sections. Some things described here are common to all payment processors, whereas others may not be. After reading this section, you should have a good general understanding of how Mycelium Gear works, and will be able to proceed to the next sections.
 
 ## Why do you need a payment processor?
