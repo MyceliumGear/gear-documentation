@@ -3,14 +3,14 @@ Creating an order is the first step towards accepting a payment. Generally, you 
 
 To create an order, you should issue a signed POST request to https://gateway.gear.mycelium.com/gateways/:gateway_id/orders with at least one param — amount — it determines the amount to be paid for this order. The amount should be in the currency you have previously set for the gateway. If the gateway currency is BTC, then the amount is normally in satoshis. So, the request may look like this:
 
-```
+```text
 POST /gateways/:api_gateway_id/orders?amount=1
 ```
 You can get the api_gateway_id value from your gateway’s info in the admin panel.
 
 Keychain id is used to generate an address for the next order. It can be any integer > 0, but it’s better if it is a consecutive integer, so keep track of your order ids in your application. With the keychain id, the request will look like this:
 
-```
+```text
 POST /gateways/:api_gateway_id/orders?amount=1&keychain_id=1
 ```
 ## Sending additional data
@@ -19,7 +19,7 @@ You may want to send some additional data with the transaction that will later b
 
 For example, suppose you have a Purchase model in your Rails app. You then might want to create a purchase and send its id in the callback_data param:
 
-```
+```text
 POST /gateways/:api_gateway_id/orders?amount=1&keychain_id=1&callback_data=purchase_id_123
 ```
 Later on, when the callback request is issued, this callback_data param will be returned back with it and you’ll be able to find that purchase in your DB.

@@ -6,7 +6,10 @@ To create a gateway, simply go to this page and fill out the form. Almost all of
 * *Name is what your customers will see at the top of the payment page when they try to make a purchase. It is also the name of the gateway that you see as a merchant in the admin panel. While it does not affect anything in particular, it's a good idea to put something meaningful in there.
     Confirmations required should typically be set to 0, unless you expect large payment amounts. In Bitcoin, each transaction is considered completely settled only when you have 6 confirmations (which may take about an hour). However, you can still assume with a degree of certainty that the payment will get processed and settled in one hour as soon as the transaction has been broadcasted to the Bitcoin network. You generally don't want your customers to wait, thus the current industry standard is to accept transactions with 0 confirmations. That way, as soon as your customer sends money from his wallet, we can detect that transaction and redirect him back to your website.
 * BIP32 pubkey is the most important of the fields, and looks similar to this (beginning with xpub):
-  `xpub6AHA9hZDN11k2ijHMeS5QqHx2KP9aMBRhTDqANMnwVtdyw2TDYRmF8PjpvwUFcL1Et8Hj59S3gTSMcUQ5gAqTz3Wd8EsMTmF3DChhqPQBnU`
+
+```text
+xpub6AHA9hZDN11k2ijHMeS5QqHx2KP9aMBRhTDqANMnwVtdyw2TDYRmF8PjpvwUFcL1Et8Hj59S3gTSMcUQ5gAqTz3Wd8EsMTmF3DChhqPQBnU
+```
   It is based on Bitcoin BIP32 standard, and is derived from your wallet's private key. Mycelium Gear uses it to generate new address for each new order. Not all wallets support BIP32, but two of the most popular ones — Mycelium and Electrum — do. You must use a wallet that supports BIP32 to use Mycelium Gear. If you're not sure how to obtain a BIP32 public key from either of these wallets, these short videos explain how to do that for Electrum and for Mycelium.
 * Order expiration period is the period of time during which a customer has to pay for the order. If he does not pay in time, the order is considered expired. The default is 900 seconds (15 minutes) which is an industry standard.
 * Active flag simply means that this gateway is currently ready to process payments. If you need to temporarily stop accepting payments, you can always come back to that form (edit the existing gateway) and uncheck that checkbox.

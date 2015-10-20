@@ -2,7 +2,7 @@ Although being notified through a callback is the standard way of letting your w
 
 Thus, it is important to have another reliable method of checking the status of orders. To check the current status of an order, issue the following signed GET request:
 
-```
+```text
 GET https://gateway.gear.mycelium.com/gateways/:api_gateway_id/orders/:payment_id
 ```
 where **:api_gateway_id** is the API id of your gateway, which you can look up on its info page and :payment_id is the way you identify your order (it was returned to you initially when you created the order). The response will return a json similar to what a callback might have passed to you via params:

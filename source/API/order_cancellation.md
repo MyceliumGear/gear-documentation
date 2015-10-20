@@ -2,7 +2,7 @@ If user cancels his purchase, it’s better to cancel the Mycelium Gear order as
 
 Order can be canceled by signed request:
 
-```
+```text
 POST /gateways/:api_gateway_id/orders/(:order_id or :payment_id)/cancel
 ```
 Or by using straight-server-kit:

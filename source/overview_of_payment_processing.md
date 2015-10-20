@@ -5,10 +5,14 @@ A payment processor is used to handle payments for you — charge credit cards, 
 
 ## How do payment processors usually work?
 For example, suppose you have a website called worldsbestshoes.com that accepts payments through VeryPay.com, a credit card payment processor. A user picks his shoes, adds them to the "cart" on the site, and clicks "Complete purchase." At this point, you redirect him to the
-`https://verypay.com/order/08ccaf5cd48628fb69900d7295cd46de5ac97dc3d798816f550a266f3eec01e1`
+
+```text
+https://verypay.com/order/08ccaf5cd48628fb69900d7295cd46de5ac97dc3d798816f550a266f3eec01e1
+```
 
 There, the user sees a form into which he can type his credit card info. Once he finishes entering it, he clicks "Pay." As soon as he does that, VeryPay connects to his credit card company's API and attempts to charge the card. If the operation was successful, it redirects the user back to your website (or shows him the button which will redirect him there manually) and also issues a callback (webhook) to
-```
+
+```text
 POST https://worldsbestshoes.com/payments/callback
 ```
 where it sends (via POST parameters) all the info about the payment. If the payment fails, it lets the customer know, and also issues a callback to the same URL at your site, but this time the payment info contains information about the fact that the payment failed.

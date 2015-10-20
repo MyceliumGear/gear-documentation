@@ -1,10 +1,16 @@
 Whenever an order status changes, Mycelium Gear issues a GET http request to the url specified in the gateway’s callback field (if you filled it) or in the order’s callback_url param. This way it lets your site know that the payment was either successful or has failed for some reason. This http request is also sometimes called a webhook, although we prefer not to use that term.
 
 Important information is passed in this http request as url params. Here’s what a typical callback may look like:
-`GET https://worldsbestshoes.com/payments/callback?order_id=1&amount=1&amount_in_btc=0.00000001&amount_paid_in_btc=0.00000001&status=2&address=1NZov2nm6gRCGW6r4q1qHtxXurrWNpPr1q&transaction_ids=["tid1"]&keychain_id=1&last_keychain_id=1&callback_data=some+random+data`
+
+```text
+GET https://worldsbestshoes.com/payments/callback?order_id=1&amount=1&amount_in_btc=0.00000001&amount_paid_in_btc=0.00000001&status=2&address=1NZov2nm6gRCGW6r4q1qHtxXurrWNpPr1q&transaction_ids=["tid1"]&keychain_id=1&last_keychain_id=1&callback_data=some+random+data
+```
 
 Also, request will have special header:
-`X-Signature: S2P8A16+RPaegTzJnb0Eg91csb1SExjdnvadABmQvfoIry4POBp6WbA6UOSqXojzRevyC8Ya/5QrQTnNxIb4og==`
+
+```text
+X-Signature: S2P8A16+RPaegTzJnb0Eg91csb1SExjdnvadABmQvfoIry4POBp6WbA6UOSqXojzRevyC8Ya/5QrQTnNxIb4og==
+```
 
 The following list explains in detail the information and parameters in the GET callback request:
 
