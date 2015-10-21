@@ -7,10 +7,11 @@ To create a gateway, simply go to this page and fill out the form. Almost all of
     Confirmations required should typically be set to 0, unless you expect large payment amounts. In Bitcoin, each transaction is considered completely settled only when you have 6 confirmations (which may take about an hour). However, you can still assume with a degree of certainty that the payment will get processed and settled in one hour as soon as the transaction has been broadcasted to the Bitcoin network. You generally don't want your customers to wait, thus the current industry standard is to accept transactions with 0 confirmations. That way, as soon as your customer sends money from his wallet, we can detect that transaction and redirect him back to your website.
 * BIP32 pubkey is the most important of the fields, and looks similar to this (beginning with xpub):
 
-```text
-xpub6AHA9hZDN11k2ijHMeS5QqHx2KP9aMBRhTDqANMnwVtdyw2TDYRmF8PjpvwUFcL1Et8Hj59S3gTSMcUQ5gAqTz3Wd8EsMTmF3DChhqPQBnU
-```
-  It is based on Bitcoin BIP32 standard, and is derived from your wallet's private key. Mycelium Gear uses it to generate new address for each new order. Not all wallets support BIP32, but two of the most popular ones — Mycelium and Electrum — do. You must use a wallet that supports BIP32 to use Mycelium Gear. If you're not sure how to obtain a BIP32 public key from either of these wallets, these short videos explain how to do that for Electrum and for Mycelium.
+    ```text
+    xpub6AHA9hZDN11k2ijHMeS5QqHx2KP9aMBRhTDqANMnwVtdyw2TDYRmF8PjpvwUFcL1Et8Hj59S3gTSMcUQ5gAqTz3Wd8EsMTmF3DChhqPQBnU
+    ```  
+ 
+    It is based on Bitcoin BIP32 standard, and is derived from your wallet's private key. Mycelium Gear uses it to generate new address for each new order. Not all wallets support BIP32, but two of the most popular ones — Mycelium and
 * Order expiration period is the period of time during which a customer has to pay for the order. If he does not pay in time, the order is considered expired. The default is 900 seconds (15 minutes) which is an industry standard.
 * After payment redirect url is used to return the customer back to your website after a successful purchase. This could be a page specific to the order, or to their account.
 * When you select auto redirect checkbox, all users who have successful payment will be automatically redirected to the specified above URL.
