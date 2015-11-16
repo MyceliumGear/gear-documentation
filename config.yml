@@ -10,3 +10,6 @@
     - order_websocket
     - order_cancellation
     - receiving_last_keychain_id_for_gateway
+- Developers API:
+    - basic
+    - gateways
