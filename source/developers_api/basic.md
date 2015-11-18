@@ -1,18 +1,18 @@
 # Basic principles
-Our API based on [JSONAPI](http://jsonapi.org/) (version 1.0) implementation of Hypermedia JSON. 
+The API is based on [JSONAPI](http://jsonapi.org/) (version 1.0) implementation of Hypermedia JSON. 
 
-Versioninig is done throught HTTP header **Accept-Version**
+Versioninig is done through HTTP header **Accept-Version**
 
-To use API account must have developer role.
+To use the API, your account must have a *developer* role.
 
-## Authentification
-Each request to API is signed usging method described [here]().
+## Authentication
+Each request to the API is signed usging the method described [here]().
 
-**Secret key** possible generate in Account page. On the bottom there is checkbox, if select it and press update you will see your secret key. Please, don't forget to write it down somewhere. If you regenerate it, the old key will no longer work.
+You can generate your **Secret key** on your account page. Go to the bottom of the page where you will see a checkbox: check it and click "update" - you will then see your secret key. Please, don't forget to write it down somewhere. If you regenerate it, the old key will no longer work.
 
 ## Errors
-All errors returns in *errors* root element as array.
-If error related to problems with request it will return:
+All errors are returned under the *errors* property in the returned object, the value of that property is as an array of errors.
+If there are errors in the request you've sent, it will return the following:
 
 ```json
 {
@@ -23,7 +23,7 @@ If error related to problems with request it will return:
 }
 ```
 
-If there is validation errors, response may looks like:
+If there are validation errors, a response may look like this:
 
 ```json
 {

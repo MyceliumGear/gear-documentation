@@ -1,36 +1,36 @@
 # Gateways API
-It is possible to create, update or get list of all gateways. 
+With Gear's developer API, it is possible to create, update or get a list of all gateways. 
 
 ## Create gateway
-To create gateway, you need to make **POST** request on `/api/gateways` with body:
+To create a gateway, you need to make a **POST** request to `/api/gateways` with the following body:
 
 Required fields:
 
-- *name*. Name of gateway.
-- *pubkey*. The public key of the wallet where you will receive the money.
-- *confirmations_required*. The number of required confirmations to consider the transaction successful.
-- *orders_expiration_period*. How long the order will be waiting for payment (in seconds). Should be between 0 and 1800. 
-- *default_currency*. Default currency which will be shown in orders. 
+  - *name*. Name of your gateway
+  - *pubkey*. Public key (xpub) exported from the wallet to which you will receive bitcoins
+  - *confirmations_required*. Number of required confirmations to consider transaction successful
+  - *orders_expiration_period*. How long the order will be waiting for a payment (in milliseconds). Should be between 0 and 1800
+  - *default_currency*. Default currency to display order amounts in
 
 Optional fields:
 
-- *active*. Is gateways active. Default: true
-- *address_derivation_scheme*. Address derivation scheme. Default: "m/0/n"
-- *callbackurl*. Callback url, where our sevrer will report on the status of the order
-- *afterpayment_redirect_to*. Redirect user to that address after payment (works if `auto_redirect` is true)
-- *auto_redirect*. Automatically redirect user after payment. Boolean. Default: false
-- *test_pubkey*. Test public key. Useing if `test_mode` is set. 
-- *test_mode*. Activate or deactivate test mode. Default: false
-- *convert_currency_to*. Can be "BTC", "USD", "EUR". Default: "BTC" 
-- *exchange_rate_adapter_names*. Where get exchange rate. Array. Default: ["Bitstamp", "Btce", "Kraken"]
-- *description*. 
-- *merchant_url*. URL of merchant. 
-- *receive_payments_notifications*. Send notifications about new payments to client email. Boolean. Default: false
-- *city*. 
-- *region*.
-- *country*. 
-- *locale*. Currently only "EN" locale aviable. Default: "en"
-- *allow_links*. Boolean. Default: false
+  - *active* - If a gateway is active (can generate new orders). Default: *true*
+  - *address_derivation_scheme* - How we derive each new address from the provided xpub (see BIP32 documentation)
+  - *callbackurl* - A callback url is where our server will report all order status changes by performing a callback request
+  - *afterpayment_redirect_to* - Is a URL to which users are redirected after they made a payment
+  - *auto_redirect*. Automatically redirect user after payment. Boolean. Default: *false*
+  - *test_pubkey* - Testnet public key. Used if *test_mode* is enabled
+  - *test_mode* - Activate or deactivate testnet mode. Default: *false*
+  - *convert_currency_to*. Convert given amount in to specific currency. Possible: "BTC", "USD", "EUR". Default: *"BTC"*
+  - *exchange_rate_adapter_names*. Where we get exchange rates. Array. Default: *["Bitstamp", "Btce", "Kraken"]*
+  - *description*.
+  - *merchant_url*.
+  - *receive_payments_notifications*. Send notifications about new payments to client email. Boolean. Default: *false*
+  - *city*.
+  - *region*.
+  - *country*.
+  - *locale*. Locale for all messages. Only english aviable on the current moment.  
+  - *allow_links*.
 
 Example:
 
@@ -49,7 +49,7 @@ Example:
 }
 ``` 
 
-On answer you should get new created object in format:
+A response to this request should be the following object:
 
 ```json
 {
@@ -62,10 +62,10 @@ On answer you should get new created object in format:
   }
 }
 ```
-With status code: **201**
+Status code is: **201**
 
 ## Update gateway
-To update gateway. you need to make **PATCH** request on `/api/gateways` with body:
+To update a gateway, you need to make a **PATCH** request to `/api/gateways` with the following body:
 
 ```json
 {
@@ -78,13 +78,14 @@ To update gateway. you need to make **PATCH** request on `/api/gateways` with bo
   }
 }
 ```
-`id` of gateway you wnat to change.
-In `attributes` listed fields which you want to change. Others fields will not change.
+
+where *id* is an ID of a gateway you wnat to change.
+You can list fields you wish to change under the *attributes* key. Others fields will not change.
 
 ## Get gateways list
-For getting list of all gateways you need to make **GET** request on `/api/gateways` with empty body.
+To fetch a list of all gateways you need to make a **GET** request to `/api/gateways` with an empty body.
 
-In response you should get:
+A response to this request should be the following object:
 
 ```json
 {
@@ -102,16 +103,16 @@ In response you should get:
   ]
 }
 ```
-By default returned list limited to 25 records. If you want more, it's possible to send query parameters described in *Pagination* section.
+By default the returned list is limited to 25 records. If you want more, you'll need to send a query parameter described in *Pagination* section.
 
 ### Pagination
  
-Strategy is cursor-based. Option pased as query parameters.
+The strategy is cursor-based. The following options may be passed as query parameters:
 
-- **page[number]** indicates the current page.
-- **page[size]** defines how many maximum items will be in result. Default: 25
+  - **page[number]** - defines current page.
+  - **page[size]** - defines the maximum number of items to be returned in a result. Default is 25.
 
-Resulted JSON will be with *meta* element on root level with information about pagination.
+The resulting JSON will contain a *meta* property with the pagination info:
 
 ```json
 {
@@ -128,6 +129,6 @@ Resulted JSON will be with *meta* element on root level with information about p
 Example:
 
 ```
-https://admin.gear.mycelium.com/api/gateways?page[number]=1&page[size]=5
+https://example.com/api/gateways?page[number]=1&page[size]=5
 ```
-It will show first 5 gateways.
+This will show first 5 gateways.
