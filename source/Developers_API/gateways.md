@@ -1,36 +1,51 @@
-# Gateways API
-With Gear's developer API, it is possible to create, update or get a list of all gateways. 
+With Gear's developer API, it is possible to create, update or get a list (or one) of gateways. 
 
 ## Create gateway
 To create a gateway, you need to make a **POST** request to `/api/gateways` with the following body:
 
 Required fields:
 
-  - *name*. Name of your gateway
-  - *pubkey*. Public key (xpub) exported from the wallet to which you will receive bitcoins
-  - *confirmations_required*. Number of required confirmations to consider transaction successful
-  - *orders_expiration_period*. How long the order will be waiting for a payment (in milliseconds). Should be between 0 and 1800
-  - *default_currency*. Default currency to display order amounts in
+- *name*.  
+  Name of your gateway
+- *pubkey*.  
+  Public key (xpub) exported from the wallet to which you will receive Bitcoins
+- *confirmations_required*.  
+  Number of required confirmations to consider transaction successful
+- *orders_expiration_period*.  
+  How long the order will be waiting for a payment (in milliseconds). Should be between 0 and 1800
+- *default_currency*.   
+  Default currency to display order amounts in
 
 Optional fields:
 
-  - *active* - If a gateway is active (can generate new orders). Default: *true*
-  - *address_derivation_scheme* - How we derive each new address from the provided xpub (see BIP32 documentation)
-  - *callbackurl* - A callback url is where our server will report all order status changes by performing a callback request
-  - *afterpayment_redirect_to* - Is a URL to which users are redirected after they made a payment
-  - *auto_redirect*. Automatically redirect user after payment. Boolean. Default: *false*
-  - *test_pubkey* - Testnet public key. Used if *test_mode* is enabled
-  - *test_mode* - Activate or deactivate testnet mode. Default: *false*
-  - *convert_currency_to*. Convert given amount in to specific currency. Possible: "BTC", "USD", "EUR". Default: *"BTC"*
-  - *exchange_rate_adapter_names*. Where we get exchange rates. Array. Default: *["Bitstamp", "Btce", "Kraken"]*
-  - *description*.
-  - *merchant_url*.
-  - *receive_payments_notifications*. Send notifications about new payments to client email. Boolean. Default: *false*
-  - *city*.
-  - *region*.
-  - *country*.
-  - *locale*. Locale for all messages. Only english aviable on the current moment.  
-  - *allow_links*.
+- *active*.  
+If a gateway is active (can generate new orders). Default: *true*
+- *address_derivation_scheme*.  
+  How we derive each new address from the provided xpub (see BIP32 documentation)
+- *callbackurl*.  
+  A callback url is where our server will report all order status changes by performing a callback request
+- *afterpayment_redirect_to*.  
+  Is a URL to which users are redirected after they made a payment
+- *auto_redirect*.  
+  Automatically redirect user after payment. Boolean. Default: *false*
+- *test_pubkey*.  
+  Testnet public key. Used if *test_mode* is enabled
+- *test_mode*.  
+  Activate or deactivate testnet mode. Default: *false*
+- *convert_currency_to*.  
+  Convert given amount in to specific currency. Possible: "BTC", "USD", "EUR". Default: *"BTC"*
+- *exchange_rate_adapter_names*.  
+  Where we get exchange rates. Array. Default: *["Bitstamp", "Btce", "Kraken"]*
+- *receive_payments_notifications*.  
+  Send notifications about new payments to client email. Boolean. Default: *false*
+- *locale*.  
+  Locale for all messages. Only english aviable on the current moment.
+- *allow_links*.
+- *description*.
+- *merchant_url*.
+- *city*.
+- *region*.
+- *country*.
 
 Example:
 
@@ -82,23 +97,44 @@ To update a gateway, you need to make a **PATCH** request to `/api/gateways` wit
 where *id* is an ID of a gateway you wnat to change.
 You can list fields you wish to change under the *attributes* key. Others fields will not change.
 
+## Get full information about specific gateway
+To get a information about specific gateway, you need to make a **GET** request `/api/gateways/{gateway_id}`.
+
+In result a response will be:
+
+```json
+{
+  "data": {
+      "type": "gateway",
+      "id": 1,
+      "attributes": {
+        ...
+      }
+    }
+}
+
+```
+
 ## Get gateways list
 To fetch a list of all gateways you need to make a **GET** request to `/api/gateways` with an empty body.
 
 A response to this request should be the following object:
 
 ```json
-{
-  "data": [
+{"data": [
     {
-      type: "gateway",
-      id: 1,
-      attributes: { ... }
+      "type": "gateway",
+      "id": 1,
+      "attributes": {
+        ...
+      }
     },
     {
-      type: "gateway",
-      id: 2,
-      attributes: { ... }
+      "type": "gateway",
+      "id": 2,
+      "attributes": {
+        ...
+      }
     }
   ]
 }
@@ -122,7 +158,9 @@ The resulting JSON will contain a *meta* property with the pagination info:
       "size": 25
     }
   }
-  "data": { ... }
+  "data": {
+    ...
+  }
 }
 ```
 

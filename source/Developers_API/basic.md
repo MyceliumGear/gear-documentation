@@ -1,14 +1,19 @@
-# Basic principles
-The API is based on [JSONAPI](http://jsonapi.org/) (version 1.0) implementation of Hypermedia JSON. 
+The API is based on <a href="http://jsonapi.org/" target="_blank">JSONAPI</a> (version 1.0) implementation. 
 
-Versioninig is done through HTTP header **Accept-Version**
+Versioninig is done through HTTP header **Accept-Version**. It's possible to not set version, then last will be used. 
 
-To use the API, your account must have a *developer* role.
+```
+Accept-Version: v1
+```
+
+To use the API, your account must have a **developer** role.
 
 ## Authentication
-Each request to the API is signed usging the method described [here]().
+Each request to the API is signed usging the method described [here](/docs/API/signed_request).
 
-You can generate your **Secret key** on your account page. Go to the bottom of the page where you will see a checkbox: check it and click "update" - you will then see your secret key. Please, don't forget to write it down somewhere. If you regenerate it, the old key will no longer work.
+You can generate your **Secret key** on your account page.  
+Go to the bottom of the page where you will see a checkbox: check it and click "update" - you will then see your secret key.
+Please, don't forget to write it down somewhere. If you regenerate it, the old key will no longer work.
 
 ## Errors
 All errors are returned under the *errors* property in the returned object, the value of that property is as an array of errors.
