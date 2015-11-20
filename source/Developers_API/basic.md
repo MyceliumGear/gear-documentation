@@ -11,9 +11,9 @@ To use the API, your account must have a **developer** role.
 ## Authentication
 Each request to the API is signed usging the method described [here](/docs/API/signed_request).
 
-You can generate your **Secret key** on your account page.  
-Go to the bottom of the page where you will see a checkbox: check it and click "update" - you will then see your secret key.
-Please, don't forget to write it down somewhere. If you regenerate it, the old key will no longer work.
+You can generate your **Secret key** on your account page.
+At the bottom of the page check "Regenerate API Secret" checkbox, enter your current password and click "Save changes" button - API Secret key will be generated for you.
+Please, don't forget to write it down somewhere. If you lost API Secret key, you will need to regenerate it. After this old key will no longer work.
 
 ## Errors
 All errors are returned under the *errors* property in the returned object, the value of that property is as an array of errors.
