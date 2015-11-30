@@ -1,16 +1,16 @@
 ---
 en:
-  - introduction
-  - overview_of_payment_processing
-  - creating_a_new_gateway
+  - introduction: inctroduction
+  - Overview of Payment Processing: overview_of_payment_processing
+  - Creating a New Gateway: creating_a_new_gateway
   - API:
-      - signed_request
-      - creating_orders
-      - receiving_order_status_change_callback
-      - checking_order_status_manually
-      - order_websocket
-      - order_cancellation
-      - receiving_last_keychain_id_for_gateway
+      - Signed Request: api/signed_request
+      - Creating Orders: api/creating_orders
+      - Receiving Order Status Change Callback: api/receiving_order_status_change_callback
+      - Checking Order Status Manually: api/checking_order_status_manually
+      - Order Websocket: api/order_websocket
+      - Order Cancellation: api/order_cancellation
+      - Receiving Last Keychain ID for Gateway: api/receiving_last_keychain_id_for_gateway
   - Developers_API:
-      - basic
-      - gateways
+      - Basic: developers_api/basic
+      - Gateways: developers_api/gateways
