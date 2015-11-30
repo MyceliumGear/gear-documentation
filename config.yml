@@ -1,6 +1,6 @@
 ---
 en:
-  - introduction: inctroduction
+  - Introduction: introduction
   - Overview of Payment Processing: overview_of_payment_processing
   - Creating a New Gateway: creating_a_new_gateway
   - API:
