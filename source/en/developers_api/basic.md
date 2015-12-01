@@ -6,7 +6,8 @@ Versioninig is done through HTTP header **Accept-Version**. It's possible to not
 Accept-Version: v1
 ```
 
-To use the API, your account must have a **developer** role.
+To use the API, your account must have a **developer** role.  
+To activate this role on the account page use checkbox on the bottom of page.
 
 ## Authentication
 Each request to the API is signed usging the method described [here](/docs/API/signed_request).
