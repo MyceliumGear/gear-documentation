@@ -7,7 +7,8 @@ Accept-Version: v1
 ```
 
 To use the API, your account must have a **developer** role.  
-To activate this role on the account page use checkbox on the bottom of page.
+In order to use Developer API you should first enable it and get a Secret key.
+To do so, proceed to account section, check "Enable Developers API" and click "Save changes" button.
 
 ## Authentication
 Each request to the API is signed usging the method described [here](/docs/API/signed_request).
