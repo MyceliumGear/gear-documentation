@@ -11,6 +11,6 @@ en:
       - Order Websocket: api/order_websocket.md
       - Order Cancellation: api/order_cancellation.md
       - Receiving Last Keychain ID for Gateway: api/receiving_last_keychain_id_for_gateway.md
-  - Developers API:
+  - Developer API:
       - Basic: developers_api/basic.md
       - Gateways: developers_api/gateways.md
