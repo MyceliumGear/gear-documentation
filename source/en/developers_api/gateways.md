@@ -77,6 +77,7 @@ A response to this request should be the following object:
   }
 }
 ```
+Additionally it returns *secret* key.
 Status code is: **201**
 
 ## Update gateway
@@ -170,3 +171,23 @@ Example:
 https://example.com/api/gateways?page[number]=1&page[size]=5
 ```
 This will show first 5 gateways.
+
+### Regenerate Gateway Secret key
+
+If old secret was compromised or losted it is possible to regenerate new one.
+
+**GET** request to address: `api/gateways/{gateways_id}/regenerate_secret`
+
+The resulting JSON will be like:
+
+```json
+{
+  "data": {
+    "type": "gateways",
+    "id": "1",
+    "attributes": {
+      "secret": "2dfi349jfj233jjfk3oixc..."
+    }
+  }
+}
+```
