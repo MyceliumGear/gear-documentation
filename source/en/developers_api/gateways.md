@@ -54,13 +54,13 @@ Example:
   "data": {
     "type": "gateways",
     "attributes": {
-      "name": "Test gateway",
-      "pubkey": "xpub",
-      "confirmations_required": 1,
+      "name": "Main Shop", 
+      "pubkey": "xpub661MyMwAqRbcEwQNZ9JUoEvoFmv3qi4u2TUJvjmJLUgEb6cUjDvxPk2vkpWAyiKVXwBrHfai7hf6G5aMEKiyZ8uwKgP7tmtdzCsh3CsNeqh",
+      "confirmations_required": "0",
       "orders_expiration_period": 1000,
       "default_currency": "USD"
-    }
-  }
+     }
+   }
 }
 ``` 
 
@@ -69,10 +69,41 @@ A response to this request should be the following object:
 ```json
 {
   "data": {
-    "type": "gateway",
-    "id": 2,
+    "id": "56",
+    "type": "gateways",
     "attributes": {
-      ...
+      "name": "Main Shop",
+      "confirmations-required": 0,
+      "orders-expiration-period": 1000,
+      "default-currency": "USD",
+      "pubkey": "xpub661MyMwAqRbcEwQNZ9JUoEvoFmv3qi4u2TUJvjmJLUgEb6cUjDvxPk2vkpWAyiKVXwBrHfai7hf6G5aMEKiyZ8uwKgP7tmtdzCsh3CsNeqh",
+      "active": true,
+      "address-derivation-scheme": "m/0/n",
+      "callback-url": null,
+      "after-payment-redirect-to": null,
+      "auto-redirect": false,
+      "city": null,
+      "test-pubkey": null,
+      "test-mode": false,
+      "convert-currency-to": "BTC",
+      "country": null,
+      "exchange-rate-adapter-names": [
+        "Bitstamp",
+        "Btce",
+        "Kraken",
+        "Bitpay"
+      ],
+      "description": null,
+      "merchant-url": null,
+      "receive-payments-notifications": false,
+      "region": null,
+      "locale": null,
+      "allow-links": false,
+      "secret": "34uTGjxSZYReWAPGDimrbqZn3fXujGj_some_random_string",
+      "api-gateway-id": "c2e3f03_hashed_id_for_gatewa"
+    },
+    "links": {
+      "self": "http://admin.gear.mycelium.com/api/gateways/56"
     }
   }
 }
