@@ -22,9 +22,9 @@ Optional fields:
 If a gateway is active (can generate new orders). Default: *true*
 - *address_derivation_scheme*.  
   How we derive each new address from the provided xpub (see BIP32 documentation)
-- *callbackurl*.  
+- *callback_url*.  
   A callback url is where our server will report all order status changes by performing a callback request
-- *afterpayment_redirect_to*.  
+- *after_payment_redirect_to*.  
   Is a URL to which users are redirected after they made a payment
 - *auto_redirect*.  
   Automatically redirect user after payment. Boolean. Default: *false*
