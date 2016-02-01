@@ -35,14 +35,31 @@ The following list explains in detail the information and parameters in the GET 
 * transaction_ids
     If the status is 1,2,3 or 4, this will contain JSON array with the Bitcoin transaction IDs
 * callback_data  
-    This contains any additional data that was sent along with the transaction while #{ link_to "creating the order", "/docs/creating_orders" }. For example, if you sent "hello world" as data in the request that created that order, you will also get the same string back with a callback — as the value for the callback_data key within the returned json.
+    This contains any additional data that was sent along with the transaction while creating the order. For example, if you sent "hello world" as data in the request that created that order, you will also get the same string back with a callback — as the value for the callback_data key within the returned json.
 * X-Signature header  
     This is the most important piece of information in regards to security. Keep in mind that anyone can make a request to that callback url of yours and basically fool your website into believing that a certain order was paid. To avoid that, Mycelium Gear uses signatures to sign a callback request, so that you can verify it came from Mycelium Gear and not somebody else. This is explained in detail below.
 
 ## Callback signature
 
-It's generated in the same way as a signature for signed API requests, except that it uses blank X-Nonce. If you're using Ruby, callback signature can be verified via `straight-server-kit` gem.
+It's generated in the same way as a signature for signed API requests, except that it uses blank Nonce and Body.
 
+```
+Base64StrictEncode(
+  HMAC-SHA512(
+    REQUEST_METHOD + REQUEST_URI,
+    GATEWAY_SECRET
+  )
+)
+```
+
+Example of how a signature creates, using `x-signature` gem:
+
+```ruby
+SignatureValidator.signature(method: 'GET', request_uri: uri.request_uri, secret: secret, nonce: nil, body: nil)
+```
+
+If you're using Ruby, callback signature can be verified via `straight-server-kit` gem.
+ 
 ```ruby
   request_uri = URI(env['REQUEST_URI']).request_uri rescue env['REQUEST_URI']
   if StraightServerKit.valid_callback?(signature:   headers['X-Signature'],
