@@ -41,6 +41,8 @@ If a gateway is active (can generate new orders). Default: *true*
 - *locale*.  
   Locale for all messages. Only english aviable on the current moment.
 - *allow_links*.
+- *back_url*.
+  Is a URL to which users are taken if they click Cancel in the payment screen.
 - *description*.
 - *merchant_url*.
 - *city*.
@@ -99,6 +101,7 @@ A response to this request should be the following object:
       "region": null,
       "locale": null,
       "allow-links": false,
+      "back_url": null,
       "secret": "34uTGjxSZYReWAPGDimrbqZn3fXujGj_some_random_string",
       "api-gateway-id": "c2e3f03_hashed_id_for_gatewa"
     },
