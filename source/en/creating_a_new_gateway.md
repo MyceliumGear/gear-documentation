@@ -11,7 +11,7 @@ To create a gateway, simply go to this page and fill out the form. Almost all of
     xpub6AHA9hZDN11k2ijHMeS5QqHx2KP9aMBRhTDqANMnwVtdyw2TDYRmF8PjpvwUFcL1Et8Hj59S3gTSMcUQ5gAqTz3Wd8EsMTmF3DChhqPQBnU
     ```  
  
-    It is based on Bitcoin BIP32 standard, and is derived from your wallet's private key. Mycelium Gear uses it to generate new address for each new order. Not all wallets support BIP32, but two of the most popular ones — Mycelium and
+    It is based on Bitcoin BIP32 standard, and is derived from your wallet's private key. Mycelium Gear uses it to generate new address for each new order. Not all wallets support BIP32, but two of the most popular ones — Mycelium and Electrum.
 * Order expiration period is the period of time during which a customer has to pay for the order. If he does not pay in time, the order is considered expired. The default is 900 seconds (15 minutes) which is an industry standard.
 * *After payment redirect url* is used to return the customer back to your website after a successful purchase. This could be a page specific to the order, or to their account.
 * When *auto redirect* is checked, all users whose payments were successful are automatically redirected to the *After payment redirect url*.
