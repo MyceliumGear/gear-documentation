@@ -133,7 +133,7 @@ where *id* is an ID of a gateway you want to change.
 You can list fields you wish to change under the *attributes* key. Others fields will not change.
 
 ## Get full information about specific gateway
-To get an information about specific gateway, you need to make a **GET** request `/api/gateways/{gateway_id}`.
+To get information about a specific gateway, you need to make a **GET** request `/api/gateways/{gateway_id}`.
 
 In result a response will be:
 
