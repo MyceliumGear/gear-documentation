@@ -4,108 +4,41 @@
 
 ### Parameters
 
-Name : user_details
-Description : Individual entity
-
-Name : email
-Description : String
-
-Name : first_name
-Description : String
-
-Name : last_name
-Description : String
-
-Name : address
-Description : String
-
-Name : postal_code
-Description : String
-
-Name : city
-Description : String
-
-Name : country_code
-Description : String
-
-Name : user_details
-Description : Legal entity
-
-Name : email
-Description : String
-
-Name : address
-Description : String
-
-Name : postal_code
-Description : String
-
-Name : city
-Description : String
-
-Name : country_code
-Description : String
-
-Name : company_name
-Description : String
-
-Name : organizational_form
-Description : String
-
-Name : registration_number
-Description : String
-
-Name : documents
-Description : Individual entity
-
-Name : gov_id_front
-Description : File
-
-Name : gov_id_back
-Description : File
-
-Name : residence
-Description : File
-
-Name : documents
-Description : Legal entity
-
-Name : company
-Description : Array of Files
-
-Name : bank_account
-Description : Bank account
-
-Name : name
-Description : String
-
-Name : address
-Description : String
-
-Name : postal_code
-Description : String
-
-Name : city
-Description : String
-
-Name : country_code
-Description : String
-
-Name : bic
-Description : String
-
-Name : iban
-Description : String
+| Name | Description
+| ---  | ---
+| **user_details** | **Individual entity**
+| email | String
+| first_name | String
+| last_name | String
+| address | String
+| postal_code | String
+| city | String
+| country_code | String
+| **user_details** | **Legal entity**
+| email | String
+| address | String
+| postal_code | String
+| city | String
+| country_code | String
+| company_name | String
+| organizational_form | String
+| registration_number | String
+| **documents** | **Individual entity**
+| gov_id_front | File
+| gov_id_back | File
+| residence | File
+| **documents** | **Legal entity**
+| company | Array of Files
+| **bank_account** | **Bank account**
+| name | String
+| address | String
+| postal_code | String
+| city | String
+| country_code | String
+| bic | String
+| iban | String
 
 ### Request
-
-#### Headers
-
-<pre>Accept: application/json
-Content-Type: multipart/form-data; boundary=----------XnJLe9ZIbbGUYtzPQJ16u1
-X-Client: authorize.me@example.org
-Host: example.org
-Cookie: </pre>
 
 #### Route
 
@@ -191,18 +124,6 @@ BE15573680538458
 
 ### Response
 
-#### Headers
-
-<pre>X-Frame-Options: SAMEORIGIN
-X-XSS-Protection: 1; mode=block
-X-Content-Type-Options: nosniff
-Content-Type: application/json; charset=utf-8
-ETag: W/&quot;d15faaba757b27569892748475114048&quot;
-Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 5cbfaba4-6dcb-428a-a3c0-988438b5fb7b
-X-Runtime: 1.485210
-Content-Length: 627</pre>
-
 #### Status
 
 <pre>200 OK</pre>
@@ -254,27 +175,14 @@ Content-Length: 627</pre>
 
 ### Parameters
 
-Name : email
-Description : Email
-
-Name : password
-Description : Password
-
-Name : token
-Description : API token
-
-Name : secret
-Description : API secret
+| Name | Description
+| ---  | ---
+| email | Email
+| password | Password
+| token | API token
+| secret | API secret
 
 ### Request
-
-#### Headers
-
-<pre>Accept: application/json
-Content-Type: application/json
-X-Client: authorize.me@example.org
-Host: example.org
-Cookie: </pre>
 
 #### Route
 
@@ -285,18 +193,6 @@ Cookie: </pre>
 <pre>{"token":"e414d696-296f-4e10-97b3-3bbaecbe150e","secret":"cTxm2TGBULSxssEXdLc2TM9FK7pqTzVg9LWDCy/BXVy/YmEkg7XrxsrcaWUpSo/6Q+76ZZTLq0IcGmMDFEeRvw=="}</pre>
 
 ### Response
-
-#### Headers
-
-<pre>X-Frame-Options: SAMEORIGIN
-X-XSS-Protection: 1; mode=block
-X-Content-Type-Options: nosniff
-Content-Type: application/json; charset=utf-8
-ETag: W/&quot;2d29240e913c5d134eb7ed66e95f53cd&quot;
-Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 23594620-151b-409d-84b9-c50c97f2e612
-X-Runtime: 0.033336
-Content-Length: 288</pre>
 
 #### Status
 
@@ -335,27 +231,14 @@ Content-Length: 288</pre>
 
 ### Parameters
 
-Name : email
-Description : Email
-
-Name : password
-Description : Password
-
-Name : token
-Description : API token
-
-Name : secret
-Description : API secret
+| Name | Description
+| ---  | ---
+| email | Email
+| password | Password
+| token | API token
+| secret | API secret
 
 ### Request
-
-#### Headers
-
-<pre>Accept: application/json
-Content-Type: application/json
-X-Client: authorize.me@example.org
-Host: example.org
-Cookie: </pre>
 
 #### Route
 
@@ -366,18 +249,6 @@ Cookie: </pre>
 <pre>{"email":"alerticus+cashila@gmail.com","password":"q1w2e3r4"}</pre>
 
 ### Response
-
-#### Headers
-
-<pre>X-Frame-Options: SAMEORIGIN
-X-XSS-Protection: 1; mode=block
-X-Content-Type-Options: nosniff
-Content-Type: application/json; charset=utf-8
-ETag: W/&quot;bf6c0ae7e2f433021f5ef813d56ec997&quot;
-Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: a4fe3992-0443-480d-8c0b-268486c4a82c
-X-Runtime: 0.036033
-Content-Length: 324</pre>
 
 #### Status
 
@@ -417,93 +288,44 @@ Content-Length: 324</pre>
 
 ### Parameters
 
-Name : id
-Description : ID of Provider
+| Name | Description
+| ---  | ---
+| id | ID of Provider
 
 
 ### Response Fields
 
-Name : status
-Description : String, &#39;pending&#39;, &#39;rejected&#39; or &#39;verified&#39;
-
-Name : rejected_reason
-Description : String, reason of rejection if status is &#39;Rejected&#39;
-
-Name : balance
-Description : Float, Balance in EUR
-
-Name : name
-Description : String
-
-Name : address
-Description : String
-
-Name : postal_code
-Description : String
-
-Name : city
-Description : String
-
-Name : country_code
-Description : String
-
-Name : bic
-Description : String
-
-Name : iban
-Description : String
-
-Name : first_name
-Description : String
-
-Name : last_name
-Description : String
-
-Name : address
-Description : String
-
-Name : postal_code
-Description : String
-
-Name : city
-Description : String
-
-Name : country_code
-Description : String
-
-Name : name
-Description : String
-
-Name : status
-Description : String, &#39;approved&#39;, &#39;pending&#39; or &#39;not present&#39;
+| Name | Description
+| ---  | ---
+| status | String, &#39;pending&#39;, &#39;rejected&#39; or &#39;verified&#39;
+| rejected_reason | String, reason of rejection if status is &#39;Rejected&#39;
+| balance | Float, Balance in EUR
+| **bank_account** | **Bank account**
+| name | String
+| address | String
+| postal_code | String
+| city | String
+| country_code | String
+| bic | String
+| iban | String
+| **user_details** | **Individual Entity**
+| first_name | String
+| last_name | String
+| address | String
+| postal_code | String
+| city | String
+| country_code | String
+| **documents** | **Documents**
+| name | String
+| status | String, &#39;approved&#39;, &#39;pending&#39; or &#39;not present&#39;
 
 ### Request
-
-#### Headers
-
-<pre>Accept: application/json
-Content-Type: application/json
-X-Client: authorize.me@example.org
-Host: example.org
-Cookie: </pre>
 
 #### Route
 
 <pre>GET api/address_providers/cashila/2</pre>
 
 ### Response
-
-#### Headers
-
-<pre>X-Frame-Options: SAMEORIGIN
-X-XSS-Protection: 1; mode=block
-X-Content-Type-Options: nosniff
-Content-Type: application/json; charset=utf-8
-ETag: W/&quot;3068dfa89cb15317baf547c2a6827e51&quot;
-Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: a23cece4-ab3d-46ff-8fa6-51a396b1d2f3
-X-Runtime: 0.059514
-Content-Length: 627</pre>
 
 #### Status
 
@@ -557,14 +379,6 @@ Content-Length: 627</pre>
 See Creating Cashila address provider for parameters description
 ### Request
 
-#### Headers
-
-<pre>Accept: application/json
-Content-Type: application/json
-X-Client: authorize.me@example.org
-Host: example.org
-Cookie: </pre>
-
 #### Route
 
 <pre>PUT api/address_providers/cashila/7</pre>
@@ -574,18 +388,6 @@ Cookie: </pre>
 <pre>{"entity":"individual","user_details":{"first_name":"Changed","last_name":"Xample","address":"somewhere","postal_code":"000000","city":"Vilnius","country_code":"LT"},"documents":{},"bank_account":{"name":"Changed","address":"Main sq.","postal_code":"123456","city":"The City","country_code":"BE","bic":"DEUTDEMM760","iban":"BE34865837743072"}}</pre>
 
 ### Response
-
-#### Headers
-
-<pre>X-Frame-Options: SAMEORIGIN
-X-XSS-Protection: 1; mode=block
-X-Content-Type-Options: nosniff
-Content-Type: application/json; charset=utf-8
-ETag: W/&quot;3e8e06694b430242b3d62292204e2643&quot;
-Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: acaff16d-823b-438d-b81e-95c00be3915a
-X-Runtime: 0.312457
-Content-Length: 664</pre>
 
 #### Status
 
@@ -640,18 +442,11 @@ Content-Length: 664</pre>
 
 ### Parameters
 
-Name : amount
-Description : Float, amount to withdraw in EUR
+| Name | Description
+| ---  | ---
+| amount | Float, amount to withdraw in EUR
 
 ### Request
-
-#### Headers
-
-<pre>Accept: application/json
-Content-Type: application/json
-X-Client: authorize.me@example.org
-Host: example.org
-Cookie: </pre>
 
 #### Route
 
@@ -662,18 +457,6 @@ Cookie: </pre>
 <pre>{"amount":0.2}</pre>
 
 ### Response
-
-#### Headers
-
-<pre>X-Frame-Options: SAMEORIGIN
-X-XSS-Protection: 1; mode=block
-X-Content-Type-Options: nosniff
-Content-Type: application/json; charset=utf-8
-ETag: W/&quot;6ef78ae01ee930da9a096b965c1ec260&quot;
-Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 05df5c12-ae0c-4263-b487-b289b172beb1
-X-Runtime: 0.019996
-Content-Length: 413</pre>
 
 #### Status
 
