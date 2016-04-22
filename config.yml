@@ -1,19 +1,21 @@
 ---
 en:
-  - Introduction: introduction.md
-  - Overview of Payment Processing: overview_of_payment_processing.md
-  - Creating a New Gateway: creating_a_new_gateway.md
-  - API:
-      - Signed Request: api/signed_request.md
-      - Creating Orders: api/creating_orders.md
-      - Receiving Order Status Change Callback: api/receiving_order_status_change_callback.md
-      - Checking Order Status Manually: api/checking_order_status_manually.md
-      - Order Websocket: api/order_websocket.md
-      - Order Cancellation: api/order_cancellation.md
-      - Receiving Last Keychain ID for Gateway: api/receiving_last_keychain_id_for_gateway.md
-  - Developer API:
-      - Basic: developers_api/basic.md
-      - Gateways: developers_api/gateways.md
-      - Address Providers:
-        - Generic: developers_api/address_providers.md
-        - Cashila: developers_api/address_providers/cashila.md
+  - Overview: overview.md
+  - Guides:
+    - Accepting Payments: guides/accepting_payments.md
+    - Converting Payments to Fiat Currencies: guides/converting_payments_to_fiat.md
+  - Reference:
+    - Overview: reference/overview.md
+    - Signing Requests: reference/signing_requests.md
+    - Error Responses: reference/error_responses.md
+    - Gateways:
+      - Overview: reference/gateways/overview.md
+      - Create: reference/gateways/create.md
+      - Show: reference/gateways/show.md
+      - Update: reference/gateways/update.md
+      - Delete: reference/gateways/delete.md
+    - Cashila Address Provider:
+      - Overview: reference/cashila_address_provider/overview.md
+      - Create: reference/cashila_address_provider/create.md
+      - Show: reference/cashila_address_provider/show.md
+      - Update: reference/cashila_address_provider/update.md
