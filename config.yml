@@ -15,5 +15,15 @@ en:
       - Basic: developers_api/basic.md
       - Gateways: developers_api/gateways.md
       - Address Providers:
-        - Generic: developers_api/address_providers.md
-        - Cashila: developers_api/address_providers/cashila.md
+        - list: developers_api/addressproviders/list.markdown
+        - Cashila:
+          - login: developers_api/addressproviders/cashila/login.markdown
+          - withdraw: developers_api/addressproviders/cashila/withdraw.markdown
+          - Legal Entity:
+            - create: developers_api/addressproviders/cashila/legalentity/create.markdown
+            - get: developers_api/addressproviders/cashila/legalentity/get.markdown
+            - update: developers_api/addressproviders/cashila/legalentity/update.markdown
+          - Individual Entity:
+            - create: developers_api/addressproviders/cashila/individual/create.markdown
+            - get: developers_api/addressproviders/cashila/individual/get.markdown
+            - update: developers_api/addressproviders/cashila/individual/update.markdown
