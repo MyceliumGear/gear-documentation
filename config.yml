@@ -24,6 +24,6 @@ en:
             - get: developers_api/addressproviders/cashila/legalentity/get.markdown
             - update: developers_api/addressproviders/cashila/legalentity/update.markdown
           - Individual Entity:
-            - create: developers_api/addressproviders/cashila/individual/create.markdown
-            - get: developers_api/addressproviders/cashila/individual/get.markdown
-            - update: developers_api/addressproviders/cashila/individual/update.markdown
+            - create: developers_api/addressproviders/cashila/individualentity/create.markdown
+            - get: developers_api/addressproviders/cashila/individualentity/get.markdown
+            - update: developers_api/addressproviders/cashila/individualentity/update.markdown
