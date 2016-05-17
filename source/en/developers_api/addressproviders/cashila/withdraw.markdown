@@ -8,26 +8,26 @@ POST https://gateway.gear.mycelium.com/api/address_providers/cashila/:id/withdra
 
 <table>
   <tr>
-    <td>id 
-    <td>ID of Cashila Address Provider
+    <td>id <i>(Integer)</i></td>
+    <td>ID of Cashila Address Provider</td>
   <tr>
-    <td>amount (float) 
-    <td>Amount to withdraw in EUR
+    <td>amount <i>(Float)</i></td>
+    <td>Amount to withdraw in EUR</td>
 </table>
 
 ### Example Request
 
 <table>
   <tr>
-    <td>REQUEST
-    <td>POST https://gateway.gear.mycelium.com/api/address_providers/cashila/15/withdraw
+    <td>REQUEST</td>
+    <td>POST https://gateway.gear.mycelium.com/api/address_providers/cashila/15/withdraw</td>
   <tr>
-    <td>PARAMETERS
+    <td>PARAMETERS</td>
     <td><pre><code>{
   &quot;amount&quot;: 0.2
-}</code></pre>
+}</code></pre></td>
   <tr>
-    <td>RETURNS
+    <td>RETURNS</td>
     <td><pre><code>{
   "type": "address_providers_cashila",
   "id": 15,
@@ -58,6 +58,6 @@ POST https://gateway.gear.mycelium.com/api/address_providers/cashila/:id/withdra
       "status": "not present"
     }
   ]
-}</code></pre>
+}</code></pre></td>
 </table>
 

@@ -8,89 +8,89 @@ GET https://gateway.gear.mycelium.com/api/address_providers/cashila/legal/:id
 
 <table>
   <tr>
-    <td>id 
-    <td>ID of Cashila Address Provider
+    <td>id <i>(Integer)</i></td>
+    <td>ID of Cashila Address Provider</td>
 </table>
 
 #### RETURNS
 
 <table>
   <tr>
-    <td>status (string)
-    <td>Verification status: &#39;pending&#39;, &#39;rejected&#39; or &#39;verified&#39;
+    <td>status <i>(String)</i></td>
+    <td>Verification status: &#39;pending&#39;, &#39;rejected&#39; or &#39;verified&#39;</td>
   <tr>
-    <td>rejected_reason (string)
-    <td>Human-readable reason of rejection if status is &#39;Rejected&#39;
+    <td>rejected_reason <i>(String)</i></td>
+    <td>Human-readable reason of rejection if status is &#39;Rejected&#39;</td>
   <tr>
-    <td>balance (float)
-    <td>Balance in EUR
+    <td>balance <i>(Float)</i></td>
+    <td>Balance in EUR</td>
   <tr>
-    <td>user_details (hash)
-    <td>User details hash
+    <td>user_details <i>(Hash)</i></td>
+    <td>User details hash</td>
   <tr>
-    <td>user_details/company_name (string)
-    <td>Company name
+    <td>user_details/company_name <i>(String)</i></td>
+    <td>Company name</td>
   <tr>
-    <td>user_details/organizational_form (string)
-    <td>Company organizational form
+    <td>user_details/organizational_form <i>(String)</i></td>
+    <td>Company organizational form</td>
   <tr>
-    <td>user_details/registration_number (string)
-    <td>Company registration number
+    <td>user_details/registration_number <i>(String)</i></td>
+    <td>Company registration number</td>
   <tr>
-    <td>user_details/address (string)
-    <td>Company street address
+    <td>user_details/address <i>(String)</i></td>
+    <td>Company street address</td>
   <tr>
-    <td>user_details/postal_code (string)
-    <td>Company postal code
+    <td>user_details/postal_code <i>(String)</i></td>
+    <td>Company postal code</td>
   <tr>
-    <td>user_details/city (string)
-    <td>Company city
+    <td>user_details/city <i>(String)</i></td>
+    <td>Company city</td>
   <tr>
-    <td>user_details/country_code (string)
-    <td>Company two-letter country code
+    <td>user_details/country_code <i>(String)</i></td>
+    <td>Company two-letter country code</td>
   <tr>
-    <td>bank_account (hash)
-    <td>Bank account information
+    <td>bank_account <i>(Hash)</i></td>
+    <td>Bank account information</td>
   <tr>
-    <td>bank_account/name (string)
-    <td>Bank account holder&#39;s name
+    <td>bank_account/name <i>(String)</i></td>
+    <td>Bank account holder&#39;s name</td>
   <tr>
-    <td>bank_account/address (string)
-    <td>Bank account holder&#39;s street address
+    <td>bank_account/address <i>(String)</i></td>
+    <td>Bank account holder&#39;s street address</td>
   <tr>
-    <td>bank_account/postal_code (string)
-    <td>Bank account holder&#39;s postal code
+    <td>bank_account/postal_code <i>(String)</i></td>
+    <td>Bank account holder&#39;s postal code</td>
   <tr>
-    <td>bank_account/city (string)
-    <td>Bank account holder&#39;s city
+    <td>bank_account/city <i>(String)</i></td>
+    <td>Bank account holder&#39;s city</td>
   <tr>
-    <td>bank_account/country_code (string)
-    <td>Bank account holder&#39;s two-letter country code
+    <td>bank_account/country_code <i>(String)</i></td>
+    <td>Bank account holder&#39;s two-letter country code</td>
   <tr>
-    <td>bank_account/bic (string)
-    <td>Bank account BIC
+    <td>bank_account/bic <i>(String)</i></td>
+    <td>Bank account BIC</td>
   <tr>
-    <td>bank_account/iban (string)
-    <td>Bank account IBAN
+    <td>bank_account/iban <i>(String)</i></td>
+    <td>Bank account IBAN</td>
   <tr>
-    <td>documents (hash)
-    <td>Documents
+    <td>documents <i>(Hash)</i></td>
+    <td>Documents</td>
   <tr>
-    <td>name (string)
-    <td>Name of the document
+    <td>name <i>(String)</i></td>
+    <td>Name of the document</td>
   <tr>
-    <td>status (string)
-    <td>Verification status of the document: &#39;approved&#39;, &#39;pending&#39; or &#39;not present&#39;
+    <td>status <i>(String)</i></td>
+    <td>Verification status of the document: &#39;approved&#39;, &#39;pending&#39; or &#39;not present&#39;</td>
 </table>
 
 ### Example Request
 
 <table>
   <tr>
-    <td>REQUEST
-    <td>GET https://gateway.gear.mycelium.com/api/address_providers/cashila/legal/6
+    <td>REQUEST</td>
+    <td>GET https://gateway.gear.mycelium.com/api/address_providers/cashila/legal/6</td>
   <tr>
-    <td>RETURNS
+    <td>RETURNS</td>
     <td><pre><code>{
   "type": "address_providers_cashila",
   "id": 6,
@@ -129,6 +129,6 @@ GET https://gateway.gear.mycelium.com/api/address_providers/cashila/legal/:id
       "status": "not present"
     }
   ]
-}</code></pre>
+}</code></pre></td>
 </table>
 

@@ -11,29 +11,29 @@ GET https://gateway.gear.mycelium.com/api/address_providers
 
 <table>
   <tr>
-    <td>address_providers (array)
-    <td>Root element is array of hashes
+    <td>address_providers <i>(Array)</i></td>
+    <td>Root element is array of hashes</td>
   <tr>
-    <td>address_providers/id (integer)
-    <td>ID of Address Provider
+    <td>address_providers/id <i>(Integer)</i></td>
+    <td>ID of Address Provider</td>
   <tr>
-    <td>address_providers/type (string)
-    <td>Type of Address Provider
+    <td>address_providers/type <i>(String)</i></td>
+    <td>Type of Address Provider</td>
 </table>
 
 ### Example Request
 
 <table>
   <tr>
-    <td>REQUEST
-    <td>GET https://gateway.gear.mycelium.com/api/address_providers
+    <td>REQUEST</td>
+    <td>GET https://gateway.gear.mycelium.com/api/address_providers</td>
   <tr>
-    <td>RETURNS
+    <td>RETURNS</td>
     <td><pre><code>[
   {
     "type": "address_providers_cashila",
     "id": 1
   }
-]</code></pre>
+]</code></pre></td>
 </table>
 

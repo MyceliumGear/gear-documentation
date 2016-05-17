@@ -8,143 +8,143 @@ PUT https://gateway.gear.mycelium.com/api/address_providers/cashila/individual/:
 
 <table>
   <tr>
-    <td>id *
-    <td>ID of Cashila Address Provider
+    <td>id* <i>(Integer)</i></td>
+    <td>ID of Cashila Address Provider</td>
   <tr>
-    <td>user_details (hash) *
-    <td>User details hash
+    <td>user_details* <i>(Hash)</i></td>
+    <td>User details hash</td>
   <tr>
-    <td>user_details/first_name (string) *
-    <td>User&#39;s first name
+    <td>user_details/first_name* <i>(String)</i></td>
+    <td>User&#39;s first name</td>
   <tr>
-    <td>user_details/last_name (string) *
-    <td>User&#39;s last name
+    <td>user_details/last_name* <i>(String)</i></td>
+    <td>User&#39;s last name</td>
   <tr>
-    <td>user_details/address (string) *
-    <td>User&#39;s street address
+    <td>user_details/address* <i>(String)</i></td>
+    <td>User&#39;s street address</td>
   <tr>
-    <td>user_details/postal_code (string) *
-    <td>User&#39;s postal code
+    <td>user_details/postal_code* <i>(String)</i></td>
+    <td>User&#39;s postal code</td>
   <tr>
-    <td>user_details/city (string) *
-    <td>User&#39;s city
+    <td>user_details/city* <i>(String)</i></td>
+    <td>User&#39;s city</td>
   <tr>
-    <td>user_details/country_code (string) *
-    <td>User&#39;s two-letter country code
+    <td>user_details/country_code* <i>(String)</i></td>
+    <td>User&#39;s two-letter country code</td>
   <tr>
-    <td>bank_account (hash) *
-    <td>Bank account information
+    <td>bank_account* <i>(Hash)</i></td>
+    <td>Bank account information</td>
   <tr>
-    <td>bank_account/name (string) *
-    <td>Bank account holder&#39;s name
+    <td>bank_account/name* <i>(String)</i></td>
+    <td>Bank account holder&#39;s name</td>
   <tr>
-    <td>bank_account/address (string) *
-    <td>Bank account holder&#39;s street address
+    <td>bank_account/address* <i>(String)</i></td>
+    <td>Bank account holder&#39;s street address</td>
   <tr>
-    <td>bank_account/postal_code (string) *
-    <td>Bank account holder&#39;s postal code
+    <td>bank_account/postal_code* <i>(String)</i></td>
+    <td>Bank account holder&#39;s postal code</td>
   <tr>
-    <td>bank_account/city (string) *
-    <td>Bank account holder&#39;s city
+    <td>bank_account/city* <i>(String)</i></td>
+    <td>Bank account holder&#39;s city</td>
   <tr>
-    <td>bank_account/country_code (string) *
-    <td>Bank account holder&#39;s two-letter country code
+    <td>bank_account/country_code* <i>(String)</i></td>
+    <td>Bank account holder&#39;s two-letter country code</td>
   <tr>
-    <td>bank_account/bic (string) *
-    <td>Bank account BIC
+    <td>bank_account/bic* <i>(String)</i></td>
+    <td>Bank account BIC</td>
   <tr>
-    <td>bank_account/iban (string) *
-    <td>Bank account IBAN
+    <td>bank_account/iban* <i>(String)</i></td>
+    <td>Bank account IBAN</td>
   <tr>
-    <td>documents (hash) 
-    <td>Documents
+    <td>documents <i>(Hash)</i></td>
+    <td>Documents</td>
   <tr>
-    <td>documents/gov_id_front (file) *
-    <td>Government ID (front side)
+    <td>documents/gov_id_front* <i>(File)</i></td>
+    <td>Government ID (front side)</td>
   <tr>
-    <td>documents/gov_id_back (file) 
-    <td>Government ID (back side)
+    <td>documents/gov_id_back <i>(File)</i></td>
+    <td>Government ID (back side)</td>
   <tr>
-    <td>documents/residence (file) *
-    <td>Proof of Residence
+    <td>documents/residence* <i>(File)</i></td>
+    <td>Proof of Residence</td>
 </table>
 
 #### RETURNS
 
 <table>
   <tr>
-    <td>status (string)
-    <td>Verification status: &#39;pending&#39;, &#39;rejected&#39; or &#39;verified&#39;
+    <td>status <i>(String)</i></td>
+    <td>Verification status: &#39;pending&#39;, &#39;rejected&#39; or &#39;verified&#39;</td>
   <tr>
-    <td>rejected_reason (string)
-    <td>Human-readable reason of rejection if status is &#39;Rejected&#39;
+    <td>rejected_reason <i>(String)</i></td>
+    <td>Human-readable reason of rejection if status is &#39;Rejected&#39;</td>
   <tr>
-    <td>balance (float)
-    <td>Balance in EUR
+    <td>balance <i>(Float)</i></td>
+    <td>Balance in EUR</td>
   <tr>
-    <td>user_details (hash)
-    <td>User details hash
+    <td>user_details <i>(Hash)</i></td>
+    <td>User details hash</td>
   <tr>
-    <td>user_details/first_name (string)
-    <td>User&#39;s first name
+    <td>user_details/first_name <i>(String)</i></td>
+    <td>User&#39;s first name</td>
   <tr>
-    <td>user_details/last_name (string)
-    <td>User&#39;s last name
+    <td>user_details/last_name <i>(String)</i></td>
+    <td>User&#39;s last name</td>
   <tr>
-    <td>user_details/address (string)
-    <td>User&#39;s street address
+    <td>user_details/address <i>(String)</i></td>
+    <td>User&#39;s street address</td>
   <tr>
-    <td>user_details/postal_code (string)
-    <td>User&#39;s postal code
+    <td>user_details/postal_code <i>(String)</i></td>
+    <td>User&#39;s postal code</td>
   <tr>
-    <td>user_details/city (string)
-    <td>User&#39;s city
+    <td>user_details/city <i>(String)</i></td>
+    <td>User&#39;s city</td>
   <tr>
-    <td>user_details/country_code (string)
-    <td>User&#39;s two-letter country code
+    <td>user_details/country_code <i>(String)</i></td>
+    <td>User&#39;s two-letter country code</td>
   <tr>
-    <td>bank_account (hash)
-    <td>Bank account information
+    <td>bank_account <i>(Hash)</i></td>
+    <td>Bank account information</td>
   <tr>
-    <td>bank_account/name (string)
-    <td>Bank account holder&#39;s name
+    <td>bank_account/name <i>(String)</i></td>
+    <td>Bank account holder&#39;s name</td>
   <tr>
-    <td>bank_account/address (string)
-    <td>Bank account holder&#39;s street address
+    <td>bank_account/address <i>(String)</i></td>
+    <td>Bank account holder&#39;s street address</td>
   <tr>
-    <td>bank_account/postal_code (string)
-    <td>Bank account holder&#39;s postal code
+    <td>bank_account/postal_code <i>(String)</i></td>
+    <td>Bank account holder&#39;s postal code</td>
   <tr>
-    <td>bank_account/city (string)
-    <td>Bank account holder&#39;s city
+    <td>bank_account/city <i>(String)</i></td>
+    <td>Bank account holder&#39;s city</td>
   <tr>
-    <td>bank_account/country_code (string)
-    <td>Bank account holder&#39;s two-letter country code
+    <td>bank_account/country_code <i>(String)</i></td>
+    <td>Bank account holder&#39;s two-letter country code</td>
   <tr>
-    <td>bank_account/bic (string)
-    <td>Bank account BIC
+    <td>bank_account/bic <i>(String)</i></td>
+    <td>Bank account BIC</td>
   <tr>
-    <td>bank_account/iban (string)
-    <td>Bank account IBAN
+    <td>bank_account/iban <i>(String)</i></td>
+    <td>Bank account IBAN</td>
   <tr>
-    <td>documents (hash)
-    <td>Documents
+    <td>documents <i>(Hash)</i></td>
+    <td>Documents</td>
   <tr>
-    <td>name (string)
-    <td>Name of the document
+    <td>name <i>(String)</i></td>
+    <td>Name of the document</td>
   <tr>
-    <td>status (string)
-    <td>Verification status of the document: &#39;approved&#39;, &#39;pending&#39; or &#39;not present&#39;
+    <td>status <i>(String)</i></td>
+    <td>Verification status of the document: &#39;approved&#39;, &#39;pending&#39; or &#39;not present&#39;</td>
 </table>
 
 ### Example Request
 
 <table>
   <tr>
-    <td>REQUEST
-    <td>PUT https://gateway.gear.mycelium.com/api/address_providers/cashila/individual/5
+    <td>REQUEST</td>
+    <td>PUT https://gateway.gear.mycelium.com/api/address_providers/cashila/individual/5</td>
   <tr>
-    <td>PARAMETERS
+    <td>PARAMETERS</td>
     <td><pre><code>{
   &quot;user_details&quot;: {
     &quot;first_name&quot;: &quot;George&quot;,
@@ -165,9 +165,9 @@ PUT https://gateway.gear.mycelium.com/api/address_providers/cashila/individual/:
     &quot;bic&quot;: &quot;BOFABE3X&quot;,
     &quot;iban&quot;: &quot;BE34865837743072&quot;
   }
-}</code></pre>
+}</code></pre></td>
   <tr>
-    <td>RETURNS
+    <td>RETURNS</td>
     <td><pre><code>{
   "type": "address_providers_cashila",
   "id": 5,
@@ -208,6 +208,6 @@ PUT https://gateway.gear.mycelium.com/api/address_providers/cashila/individual/:
       "status": "not present"
     }
   ]
-}</code></pre>
+}</code></pre></td>
 </table>
 

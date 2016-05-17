@@ -11,33 +11,33 @@ POST https://gateway.gear.mycelium.com/api/address_providers/cashila/login
 
 <table>
   <tr>
-    <td>email (string) 
-    <td>Email for Cashila account
+    <td>email <i>(String)</i></td>
+    <td>Email for Cashila account</td>
   <tr>
-    <td>password (string) 
-    <td>Password for Cashila account
+    <td>password <i>(String)</i></td>
+    <td>Password for Cashila account</td>
   <tr>
-    <td>token (string) 
-    <td>Cashila account API token
+    <td>token <i>(String)</i></td>
+    <td>Cashila account API token</td>
   <tr>
-    <td>secret (string) 
-    <td>Cashila account API secret
+    <td>secret <i>(String)</i></td>
+    <td>Cashila account API secret</td>
 </table>
 
 ### Example Request
 
 <table>
   <tr>
-    <td>REQUEST
-    <td>POST https://gateway.gear.mycelium.com/api/address_providers/cashila/login
+    <td>REQUEST</td>
+    <td>POST https://gateway.gear.mycelium.com/api/address_providers/cashila/login</td>
   <tr>
-    <td>PARAMETERS
+    <td>PARAMETERS</td>
     <td><pre><code>{
   &quot;token&quot;: &quot;e414d696-296f-4e10-97b3-3bbaecbe150e&quot;,
   &quot;secret&quot;: &quot;cTxm2TGBULSxssEXdLc2TM9FK7pqTzVg9LWDCy/BXVy/YmEkg7XrxsrcaWUpSo/6Q+76ZZTLq0IcGmMDFEeRvw==&quot;
-}</code></pre>
+}</code></pre></td>
   <tr>
-    <td>RETURNS
+    <td>RETURNS</td>
     <td><pre><code>{
   "type": "address_providers_cashila",
   "id": 13,
@@ -62,21 +62,21 @@ POST https://gateway.gear.mycelium.com/api/address_providers/cashila/login
       "status": "not present"
     }
   ]
-}</code></pre>
+}</code></pre></td>
 </table>
 
 <table>
   <tr>
-    <td>REQUEST
-    <td>POST https://gateway.gear.mycelium.com/api/address_providers/cashila/login
+    <td>REQUEST</td>
+    <td>POST https://gateway.gear.mycelium.com/api/address_providers/cashila/login</td>
   <tr>
-    <td>PARAMETERS
+    <td>PARAMETERS</td>
     <td><pre><code>{
   &quot;email&quot;: &quot;alerticus+cashila@gmail.com&quot;,
   &quot;password&quot;: &quot;q1w2e3r4&quot;
-}</code></pre>
+}</code></pre></td>
   <tr>
-    <td>RETURNS
+    <td>RETURNS</td>
     <td><pre><code>{
   "type": "address_providers_cashila",
   "id": 11,
@@ -102,6 +102,6 @@ POST https://gateway.gear.mycelium.com/api/address_providers/cashila/login
       "status": "not present"
     }
   ]
-}</code></pre>
+}</code></pre></td>
 </table>
 
