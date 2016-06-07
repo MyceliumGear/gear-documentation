@@ -13,7 +13,11 @@ en:
       - Receiving Last Keychain ID for Gateway: api/receiving_last_keychain_id_for_gateway.md
   - Developer API:
       - Basic: developers_api/basic.md
-      - Gateways: developers_api/gateways.md
+      - Gateways:
+        - list: developers_api/gateways/list.markdown
+        - create: developers_api/gateways/create.markdown
+        - get: developers_api/gateways/get.markdown
+        - update: developers_api/gateways/update.markdown
       - Address Providers:
         - list: developers_api/addressproviders/list.markdown
         - Cashila:
