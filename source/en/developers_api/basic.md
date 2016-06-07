@@ -3,7 +3,7 @@ The API is based on <a href="http://jsonapi.org/" target="_blank">JSONAPI</a> (v
 Versioninig is done through HTTP header **Accept-Version**. It's possible to not set version, then last will be used. 
 
 ```
-Accept-Version: v1
+Accept-Version: v2
 ```
 
 In order to use Developer API you should first enable it and get a Secret key.
