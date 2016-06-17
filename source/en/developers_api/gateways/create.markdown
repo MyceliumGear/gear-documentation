@@ -210,8 +210,8 @@ POST https://gateway.gear.mycelium.com/api/gateways
   "region": null,
   "locale": null,
   "allow_links": false,
-  "secret": "3mjWCKKG6tqDt2Jd7ke6MYc6cGG2txxBFMfT6meCYngpfc3RUNsUirAkvi37ncRq",
-  "api_gateway_id": "885edce61f60dd45e8739b7c55d859bd1fe59f36b9624e497704b099ea474779",
+  "secret": "32zyyq7KSurYKofePoarY8QA8RdcTTgjGvwZxqDtKkpWY7tPQ5NRqu5aP3VWYz7R",
+  "api_gateway_id": "546c6503395d19ccb6742066aae06a361ad701b76f18fefd161a97d262cd2cf7",
   "back_url": null,
   "custom_css_url": null
 }</code></pre></td>

@@ -126,7 +126,7 @@ GET https://gateway.gear.mycelium.com/api/gateways
     "locale": null,
     "allow_links": false,
     "secret": null,
-    "api_gateway_id": "28ae95f29d532f44c111a9b693bdaf10d45703cdfb808aebb1098da43b42fd55",
+    "api_gateway_id": "6b7cf3dcddbb7abfb6e239e607809d131c159102f4961591a1aa18b2a868b61b",
     "back_url": null,
     "custom_css_url": null
   }

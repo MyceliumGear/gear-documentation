@@ -82,9 +82,6 @@ PUT https://gateway.gear.mycelium.com/api/gateways/:id
   <tr>
     <td>region <i>(Integer)</i></td>
     <td>Region of merchant</td>
-  <tr>
-    <td>regenerate_secret <i>(Boolean)</i></td>
-    <td>Whether to regenerate gateway API secret</td>
 </table>
 
 #### RETURNS
@@ -93,9 +90,6 @@ PUT https://gateway.gear.mycelium.com/api/gateways/:id
   <tr>
     <td>id <i>(Integer)</i></td>
     <td>ID of Gateway</td>
-  <tr>
-    <td>secret <i>(String)</i></td>
-    <td>API secret (showed only on creation and regeneration)</td>
   <tr>
     <td>name <i>(String)</i></td>
     <td>Gateway name (will appear on payment page)</td>
@@ -179,7 +173,7 @@ PUT https://gateway.gear.mycelium.com/api/gateways/:id
   <tr>
     <td>PARAMETERS</td>
     <td><pre><code>{
-  &quot;name&quot;: &quot;Not supergateway&quot;,
+  &quot;name&quot;: &quot;Another Gateway&quot;,
   &quot;city&quot;: &quot;Nadym&quot;,
   &quot;convert_currency_to&quot;: 16,
   &quot;default_currency&quot;: &quot;EUR&quot;,
@@ -190,7 +184,7 @@ PUT https://gateway.gear.mycelium.com/api/gateways/:id
     <td>RETURNS</td>
     <td><pre><code>{
   "id": 5,
-  "name": "Not supergateway",
+  "name": "Another Gateway",
   "confirmations_required": 0,
   "orders_expiration_period": 900,
   "default_currency": "EUR",
@@ -218,54 +212,7 @@ PUT https://gateway.gear.mycelium.com/api/gateways/:id
   "locale": null,
   "allow_links": false,
   "secret": null,
-  "api_gateway_id": "e0cc2898fa82e0b7af341307381f8a02823a7120a92096b64616dcc8439a5919",
-  "back_url": null,
-  "custom_css_url": null
-}</code></pre></td>
-</table>
-
-<table>
-  <tr>
-    <td>REQUEST</td>
-    <td>PUT https://gateway.gear.mycelium.com/api/gateways/6</td>
-  <tr>
-    <td>PARAMETERS</td>
-    <td><pre><code>{
-  &quot;regenerate_secret&quot;: true
-}</code></pre></td>
-  <tr>
-    <td>RETURNS</td>
-    <td><pre><code>{
-  "id": 6,
-  "name": "Custom Gateway",
-  "confirmations_required": 0,
-  "orders_expiration_period": 900,
-  "default_currency": "BTC",
-  "pubkey": "xpub661MyMwAqRbcEwKesFfnMbDfUP8nc8aqi9ymdNZQXqaRR6sMvrFbXZqEFG15VZUdLHThVGQUmXM425UTms8WjeCE6yNz1FJ6kiGgJ3QLcGd",
-  "active": true,
-  "address_derivation_scheme": "m/0/n",
-  "callback_url": "http://0.0.0.0/my_store_callback",
-  "after_payment_redirect_to": "http://0.0.0.0/after_payment",
-  "auto_redirect": false,
-  "city": "Mogadishu",
-  "test_pubkey": null,
-  "test_mode": false,
-  "convert_currency_to": "BTC",
-  "country": "Somalia",
-  "exchange_rate_adapter_names": [
-    "Bitpay",
-    "Coinbase",
-    "Bitstamp",
-    "Bitpay"
-  ],
-  "description": "Yet another gateway",
-  "merchant_url": "http://mystore.com",
-  "receive_payments_notifications": false,
-  "region": "Central Somalia",
-  "locale": null,
-  "allow_links": false,
-  "secret": "3eKkZWuxH8ywaTcPrUTntaiVWmrpwPZeM9YrzCDPGNUXDrAYJqHHPh2MjVuccN3A",
-  "api_gateway_id": "8e91d6c162adfb825a02fbddfe58baecc75d627d8dbb4cd64801bddbb6c8ebac",
+  "api_gateway_id": "7429b19ee4700810101f9b199fe7511f68a4f1ef1a7cd43fe66ed8ea8d91d453",
   "back_url": null,
   "custom_css_url": null
 }</code></pre></td>
