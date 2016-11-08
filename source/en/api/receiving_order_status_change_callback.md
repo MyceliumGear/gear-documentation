@@ -95,3 +95,23 @@ raw_signature.bytes == [81, 229, 207, 43, 212, 101, 96, 81, 75, 117, 138, 86, 12
 signature = Base64.strict_encode64(raw_signature)
 signature == 'UeXPK9RlYFFLdYpWeGBpSd4OWslJR076VBQU4prJlzMpe3f2KL4eUVfpiZ+Z9/c71tqYZgYWeIN78NE1/Snmyw=='
 ```
+
+JavaScript version using [jsSHA](https://github.com/Caligatio/jsSHA).
+
+```javascript
+var nonce = '';
+var body = '';
+var method = 'GET';
+var request_uri = '/payments/callback?order_id=1&amount=1&amount_in_btc=0.00000001&amount_paid_in_btc=0.00000001&status=2&address=1NZov2nm6gRCGW6r4q1qHtxXurrWNpPr1q&transaction_ids=["tid1"]&keychain_id=1&last_keychain_id=1&after_payment_redirect_to=http://example.com/payments/success&auto_redirect=true&callback_data=some+random+data';
+var secret = 'gateway.secret';
+var sha512 = new jsSHA("SHA-512", "TEXT");
+sha512.update(nonce + body);
+var constant_digest = sha512.getHash("ARRAYBUFFER");
+var request = method + request_uri;
+var sha512 = new jsSHA("SHA-512", "ARRAYBUFFER");
+sha512.setHMACKey(secret, "TEXT");
+sha512.update(new TextEncoder("UTF-8").encode(request));
+sha512.update(constant_digest);
+var signature = sha512.getHMAC("B64");
+alert(signature);
+```
